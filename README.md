@@ -4,7 +4,7 @@ A Next.js application demonstrating browser screen-sharing capabilities using th
 
 ## 🚀 Live Demo
 
-[(https://screen-share-test-app.vercel.app/)]
+https://screen-share-test-app.vercel.app
 
 ## ✨ Features
 

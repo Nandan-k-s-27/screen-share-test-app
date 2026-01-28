@@ -4,25 +4,7 @@ A Next.js application demonstrating browser screen-sharing capabilities using th
 
 ## 🚀 Live Demo
 
-[Deploy your app and add the URL here]
-
-## 📸 Screenshots
-
-### Homepage
-![Homepage](screenshots/homepage.png)
-*Homepage with browser support detection and feature overview*
-
-### Permission Request
-![Permission Request](screenshots/requesting.png)
-*Screen picker dialog requesting user permission*
-
-### Active Screen Share
-![Active Sharing](screenshots/active.png)
-*Live screen preview with stream metadata display*
-
-### Stopped State
-![Stopped](screenshots/stopped.png)
-*Screen sharing stopped with retry options*
+[(https://screen-share-test-app.vercel.app/)]
 
 ## ✨ Features
 
@@ -146,58 +128,7 @@ idle → requesting → active → stopped
         error
 ```
 
-## 🧪 Testing
-
-### Manual Testing Checklist
-
-- [ ] Homepage loads and shows browser support status
-- [ ] "Start Screen Test" navigates to /screen-test
-- [ ] Clicking share button shows browser's screen picker
-- [ ] Cancelling picker shows "cancelled" state (not generic error)
-- [ ] Selecting a screen shows live preview
-- [ ] Metadata (type, resolution, FPS) displays correctly
-- [ ] Stopping from browser UI updates state immediately
-- [ ] "Retry" starts fresh (no stale streams)
-- [ ] Navigation away cleans up resources
-- [ ] No console errors during normal usage
-- [ ] Works on Chrome and Edge
-
-## ⚠️ Known Limitations & Browser Quirks
-
-### Display Surface Detection
-- The `displaySurface` property in `MediaTrackSettings` is not available in all browsers
-- Some browsers return "unknown" for display type
-
-### Frame Rate
-- Actual frame rate may differ from requested `ideal: 30`
-- Frame rate depends on system performance and browser throttling
-
-### Permission Persistence
-- Screen sharing permissions are not persistent across sessions
-- Users must grant permission each time
-
-### Mobile Browsers
-- Screen sharing is not supported on mobile browsers
-- App gracefully shows unsupported message
-
-### Safari Support
-- Safari has limited `getDisplayMedia` support
-- Audio capture behaves differently
-
-## 🔒 Privacy
-
-- **No Recording**: This app only previews, never records
-- **No Backend**: All processing is local, no data leaves your device
-- **No Storage**: No data is persisted between sessions
-
-## 📄 License
-
-MIT License - feel free to use this code for learning and projects.
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
----
-
-Built with ❤️ using Next.js and native Web APIs

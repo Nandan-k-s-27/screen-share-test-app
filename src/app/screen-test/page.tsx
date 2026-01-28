@@ -82,7 +82,11 @@ export default function ScreenTestPage() {
   };
 
   const handleBackHome = () => {
-    stopScreenShare();
+    // Only stop screen share if there's an active stream
+    // This prevents the "stopped" status flash when returning from denied/cancelled/error states
+    if (stream) {
+      stopScreenShare();
+    }
     router.push('/');
   };
 
